@@ -1,10 +1,10 @@
 import React from 'react';
+import header from './headerUtils/header.jpg';
 
 const HeaderElem = () => {
   return (
     <div>
-      <p>Czesc</p>
-      <p>nope</p>
+      <img src={header} alt="aaa"></img>
     </div>
   );
 };
