@@ -2,6 +2,7 @@ import React from 'react';
 import HeaderElem from './header/header';
 import Navigation from './navigation/navigation';
 import PriceList from './priceList/priceList';
+import MainPage from './main/main';
 
 export const App = () => {
   return (
@@ -18,6 +19,7 @@ export const App = () => {
     >
       <Navigation />
       <HeaderElem />
+      <MainPage />
       <PriceList />
     </div>
   );

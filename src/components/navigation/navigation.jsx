@@ -1,9 +1,16 @@
 const Navigation = () => {
+  const scrollToElement = id => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav>
-      <a href="#">Hotel</a>
-      <a href="#">Cennik</a>
-      <a href="#">Kontakt</a>
+      <button onClick={() => scrollToElement('1')}>Hotel</button>
+      <button onClick={() => scrollToElement('price')}>Cennik</button>
+      <button onClick={() => scrollToElement('b')}>Kontakt</button>
     </nav>
   );
 };

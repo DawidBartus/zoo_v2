@@ -13,7 +13,7 @@ const priceListGenerator = array => {
 
 const PriceList = () => {
   return (
-    <section>
+    <section id="price">
       <ul>{priceListGenerator(normalPrice)}</ul>
       <ul>{priceListGenerator(holidayPrice)}</ul>
       <ul>{priceListGenerator(extras)}</ul>
