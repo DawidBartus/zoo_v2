@@ -1,6 +1,7 @@
 import React from 'react';
 import HeaderElem from './header/header';
 import Navigation from './navigation/navigation';
+import PriceList from './priceList/priceList';
 
 export const App = () => {
   return (
@@ -17,6 +18,7 @@ export const App = () => {
     >
       <Navigation />
       <HeaderElem />
+      <PriceList />
     </div>
   );
 };
