@@ -4,6 +4,7 @@
   height: 400px;
   background-position: top right;
   background-size: cover;
+  background-position: center bottom;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,4 +19,12 @@
   -ms-flex-align: center;
   align-items: center;
   gap: 30px;
+}
+
+.mainHeader {
+  color: white;
+  font-size: 32px;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
 }

@@ -25,6 +25,11 @@
       "react-app/jest"
     ]
   },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
   "browserslist": {
     "production": [
       ">0.2%",
