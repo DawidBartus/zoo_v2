@@ -3,7 +3,7 @@ import { normalPrice, holidayPrice, extras } from './priceListUtils/price';
 const priceListGenerator = array => {
   return array.map(price => {
     return (
-      <li>
+      <li key={price.id}>
         <p>{price.price}</p>
         <p>{price.service}</p>
       </li>
