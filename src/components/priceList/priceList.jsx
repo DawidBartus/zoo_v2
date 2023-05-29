@@ -1,9 +1,10 @@
 import { normalPrice, holidayPrice, extras } from './priceListUtils/price';
+import style from './priceListStyle.module.css';
 
 const priceListGenerator = array => {
   return array.map(price => {
     return (
-      <li key={price.id}>
+      <li key={price.id} className={style.priceListIteam}>
         <p>{price.price}</p>
         <p>{price.service}</p>
       </li>
@@ -13,10 +14,10 @@ const priceListGenerator = array => {
 
 const PriceList = () => {
   return (
-    <section id="price">
-      <ul>{priceListGenerator(normalPrice)}</ul>
-      <ul>{priceListGenerator(holidayPrice)}</ul>
-      <ul>{priceListGenerator(extras)}</ul>
+    <section id="price" className={style.priceListHolder}>
+      <ul className={style.priceList}>{priceListGenerator(normalPrice)}</ul>
+      <ul className={style.priceList}>{priceListGenerator(holidayPrice)}</ul>
+      <ul className={style.priceList}>{priceListGenerator(extras)}</ul>
     </section>
   );
 };

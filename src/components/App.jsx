@@ -9,7 +9,7 @@ export const App = () => {
     <div
       style={{
         height: '100vh',
-        width: '100%',
+
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'column',
