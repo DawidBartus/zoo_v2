@@ -1,3 +1,5 @@
+import style from './navigationStyle.module.css';
+
 const Navigation = () => {
   const scrollToElement = id => {
     const element = document.getElementById(id);
@@ -7,7 +9,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav>
+    <nav className={style.navContainer}>
       <button onClick={() => scrollToElement('1')}>Hotel</button>
       <button onClick={() => scrollToElement('price')}>Cennik</button>
       <button onClick={() => scrollToElement('b')}>Kontakt</button>

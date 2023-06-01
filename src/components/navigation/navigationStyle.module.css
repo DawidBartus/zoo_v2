@@ -1,0 +1,26 @@
+.navContainer {
+  width: 100%;
+  max-width: 1200px;
+  /* background-color: antiquewhite;
+  display: flex;
+  justify-content: flex-end; */
+}
+
+.navContainer button {
+  font-size: 20px;
+  padding: 10px;
+  margin: 20px 15px 20px 0;
+  border: 0px;
+  border-radius: 8px;
+  transition: 250ms;
+}
+
+.navContainer button:hover {
+  background-color: antiquewhite;
+  cursor: pointer;
+
+  -webkit-box-shadow: 1px 1px 12px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 1px 1px 12px 0px rgba(66, 68, 90, 1);
+  box-shadow: 1px 1px 12px 0px rgba(66, 68, 90, 1);
+  transition: 250ms;
+}
