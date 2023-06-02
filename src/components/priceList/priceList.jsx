@@ -7,7 +7,7 @@ const priceListGenerator = array => {
 
     return (
       <li key={id} className={style.priceListIteam}>
-        <p>{price}</p>
+        <p className={style.priceListPrice}>{price}</p>
         <p>{service}</p>
       </li>
     );
