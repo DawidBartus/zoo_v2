@@ -3,6 +3,7 @@ import HeaderElem from './header/header';
 import Navigation from './navigation/navigation';
 import PriceList from './priceList/priceList';
 import MainPage from './main/main';
+import ReservationForm from './reservationForm/reservationForm';
 
 export const App = () => {
   return (
@@ -20,6 +21,7 @@ export const App = () => {
       <HeaderElem />
       <MainPage />
       <PriceList />
+      <ReservationForm />
     </div>
   );
 };

@@ -1,0 +1,19 @@
+.resFormContainder {
+  width: 100%;
+  justify-content: space-around;
+  max-width: 1200px;
+  min-width: 320px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.resForm {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.styledLabel {
+  gap: 30px;
+}

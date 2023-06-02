@@ -1,4 +1,4 @@
-export const services = [
+export const servicesPL = [
   { id: 1, service: 'Opieka kilkugodzinna' },
   { id: 2, service: 'Dłuższe pobyty' },
   { id: 4, service: 'Transport zwierzaka' },

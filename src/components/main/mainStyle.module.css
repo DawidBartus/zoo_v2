@@ -31,5 +31,12 @@
   text-align: center;
   background-color: rgba(100, 100, 100, 0.233);
   border-radius: 8px;
-  box-shadow: 8px 10px 30px 7px rgba(66, 68, 90, 1);
+  transition: 0.45s;
+}
+
+.mainServicesList li:hover {
+  color: white;
+  background: linear-gradient(-45deg, #a568ac 0%, #176f92 100%);
+  transform: translate3d(0px, 5px, 0) scale(1.05);
+  transition: 0.45s;
 }

@@ -1,4 +1,4 @@
-import { services } from './mainUtils/services';
+import { servicesPL } from './mainUtils/services';
 import style from './mainStyle.module.css';
 
 const MainPage = () => {
@@ -10,9 +10,11 @@ const MainPage = () => {
   };
 
   return (
-    <main className={style.mainContainder}>
+    <main className={style.mainContainder} id="services">
       <p className={style.mainContainderHeader}>Co oferujemy?</p>
-      <ul className={style.mainServicesList}>{servicesGenerator(services)}</ul>
+      <ul className={style.mainServicesList}>
+        {servicesGenerator(servicesPL)}
+      </ul>
     </main>
   );
 };
