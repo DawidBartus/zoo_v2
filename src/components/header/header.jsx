@@ -2,8 +2,7 @@ import React from 'react';
 import header from './headerUtils/header.jpg';
 import style from './headerStyle.module.css';
 
-const HeaderElem = props => {
-  console.log(props.children);
+const HeaderElem = () => {
   return (
     <header style={{ width: '100%', maxWidth: '1200px' }}>
       <div

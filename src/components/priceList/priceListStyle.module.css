@@ -1,18 +1,28 @@
 .priceListHolder {
   display: flex;
   flex-direction: column;
-  background-color: blueviolet;
   width: 100%;
   display: flex;
   align-items: center;
   max-width: 1200px;
+  font-size: 30px;
+  border-radius: 8px;
 }
+.priceListHolder p {
+  font-size: 36px;
+  font-weight: 500;
+}
+
 .priceListIteam {
-  background-color: blue;
+  background: linear-gradient(-45deg, #a568ac 0%, #176f92 100%);
   width: 100%;
   min-width: 150px;
   max-width: 250px;
   text-align: center;
+  border-radius: 8px;
+}
+.priceListIteam p {
+  margin: 10px;
 }
 
 .priceList {

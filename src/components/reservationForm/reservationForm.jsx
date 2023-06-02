@@ -3,34 +3,50 @@ import style from './reservationFormStyle.module.css';
 const ReservationForm = () => {
   return (
     <section className={style.resFormContainder}>
-      <form action="">
+      <ul className={style.checkList}>
         <p>Przed wyjazdem:</p>
-        <label htmlFor="">
-          <input type="checkbox" name="" id="" /> Książeczka
-        </label>
-      </form>
+        <li>
+          <input type="checkbox" name="" id="" className={style.checkedItems} />{' '}
+          Książeczka
+        </li>
+      </ul>
 
       <form className={style.resForm}>
-        <label htmlFor="name">Imię i nazwisko</label>
-        <input type="text" name="name" />
+        <label htmlFor="name" className={style.resFormLabel}>
+          Imię i nazwisko
+        </label>
+        <input type="text" name="name" className={style.resFormInput} />
 
-        <label htmlFor="dogName">Imię psa</label>
-        <input type="text" name="dogName" />
+        <label htmlFor="dogName" className={style.resFormLabel}>
+          Imię psa
+        </label>
+        <input type="text" name="dogName" className={style.resFormInput} />
 
-        <label htmlFor="dogBreed">Rasa psa</label>
-        <input type="text" name="dogBreed" />
+        <label htmlFor="dogBreed" className={style.resFormLabel}>
+          Rasa psa
+        </label>
+        <input type="text" name="dogBreed" className={style.resFormInput} />
 
-        <label htmlFor="dogAge">Wiek psa</label>
-        <input type="text" name="dogAge" />
+        <label htmlFor="dogAge" className={style.resFormLabel}>
+          Wiek psa
+        </label>
+        <input type="number" name="dogAge" className={style.resFormInput} />
 
-        <label htmlFor="date">Data pobytu</label>
-        <input type="text" name="date" />
+        <label htmlFor="date" className={style.resFormLabel}>
+          Data pobytu
+        </label>
+        <input type="text" name="date" className={style.resFormInput} />
 
-        <label htmlFor="email">email</label>
-        <input type="email" name="" id="" />
+        <label htmlFor="email" className={style.resFormLabel}>
+          email
+        </label>
+        <input type="email" name="" id="" className={style.resFormInput} />
 
-        <label htmlFor="tele">Numer telefonu </label>
-        <input type="email" name="tele" id="" />
+        <label htmlFor="tele" className={style.resFormLabel}>
+          Numer telefonu{' '}
+        </label>
+        <input type="email" name="tele" id="" className={style.resFormInput} />
+        <button type="submit">Wyślij</button>
       </form>
     </section>
   );
