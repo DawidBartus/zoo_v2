@@ -27,6 +27,10 @@
   box-shadow: 4px 4px 12px 0px rgba(66, 68, 90, 1);
 }
 
+.checkListIteamsChecked {
+  color: green;
+}
+
 .checkedItems {
   width: 15px;
   height: 15px;

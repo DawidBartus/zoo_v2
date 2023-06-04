@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import style from './reservationFormStyle.module.css';
 
 const ReservationForm = () => {
@@ -5,8 +6,8 @@ const ReservationForm = () => {
     <section className={style.resFormContainder}>
       <ul className={style.checkList}>
         <p>Przed wyjazdem:</p>
-        <li>
-          <input type="checkbox" name="" id="" className={style.checkedItems} />{' '}
+        <li className={style}>
+          <input type="checkbox" name="1" className={style.checkedIteams} />
           Książeczka
         </li>
       </ul>
