@@ -1,7 +1,9 @@
+import style from './footerStyle.module.css';
+
 const Footer = () => {
   return (
-    <section>
-      <address></address>
+    <section className={style.footerSection}>
+      <address>Jakiś adres + telefon bo czemu nie + @</address>
     </section>
   );
 };

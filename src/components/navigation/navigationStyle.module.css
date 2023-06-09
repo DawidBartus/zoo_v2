@@ -37,11 +37,14 @@
 }
 
 .navContainer {
+  position: fixed;
+  top: 0;
+
+  width: 100%;
   width: 100%;
   max-width: 1200px;
   display: flex;
   justify-content: space-around;
-  margin: 20px;
 }
 
 .navContainer button {

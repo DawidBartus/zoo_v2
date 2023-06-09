@@ -4,6 +4,7 @@ import Navigation from './navigation/navigation';
 import PriceList from './priceList/priceList';
 import MainPage from './main/main';
 import ReservationForm from './reservationForm/reservationForm';
+import Footer from './footer/footer';
 
 export const App = () => {
   return (
@@ -22,6 +23,7 @@ export const App = () => {
       <MainPage />
       <PriceList />
       <ReservationForm />
+      <Footer />
     </div>
   );
 };

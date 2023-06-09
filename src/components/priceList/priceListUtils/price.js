@@ -1,7 +1,7 @@
 export const normalPrice = [
   { id: 'standardH', service: 'dzień (kilka godzin)', price: '100 zł' },
   { id: 'standardD', service: 'doba pobytu w domu', price: '150 zł' },
-  { id: 'standardDK', service: 'doba w kojcu', price: '100 zł' },
+  { id: 'standardDK', service: 'doba w boksie', price: '100 zł' },
 ];
 export const holidayPrice = [
   { id: 'holidayH', service: 'dzień (kilka godzin)', price: '200 zł' },
