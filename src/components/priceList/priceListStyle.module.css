@@ -4,9 +4,8 @@
   width: 100%;
   display: flex;
   align-items: center;
-  max-width: 1200px;
   font-size: 30px;
-  border-radius: 8px;
+  background-color: #45454523;
 }
 .priceListHolder p {
   font-size: 36px;

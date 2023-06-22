@@ -42,12 +42,14 @@
   margin-top: 10px;
   width: 100%;
   max-width: 1200px;
+  background-color: #4545450f;
+  border-radius: 8px;
   display: flex;
   justify-content: space-around;
   transition: 300ms;
 }
 
-.displayNone {
+.displayFixed {
   position: fixed;
   top: -30px;
   transition: 300ms;
@@ -59,14 +61,21 @@
   border: 0px;
   border-radius: 8px;
   transition: 250ms;
-}
-
-.navContainer button:hover {
-  background-color: antiquewhite;
-  cursor: pointer;
-  transform: translate3d(0px, 5px, 0) scale(1.1);
+  color: white;
   -webkit-box-shadow: 1px 1px 12px 0px rgba(66, 68, 90, 1);
   -moz-box-shadow: 1px 1px 12px 0px rgba(66, 68, 90, 1);
   box-shadow: 1px 1px 12px 0px rgba(66, 68, 90, 1);
+}
+
+.navContainer button:hover {
+  background-color: #09121a94;
+  cursor: pointer;
+  transform: translate3d(0px, 5px, 0) scale(1.1);
   transition: 250ms;
+}
+.blackButton {
+  background-color: #4545459f;
+}
+.lightButton {
+  background-color: transparent;
 }

@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [shouldBeDark, setShouldBeDark] = useState(false);
 
   const scrollToElement = id => {
     const element = document.getElementById(id);
@@ -15,11 +16,21 @@ const Navigation = () => {
 
   const handleScroll = () => {
     const scrollTop = window.scrollY;
+    let heightLessThan;
+
+    if (scrollTop < 500) {
+      heightLessThan = true;
+      setShouldBeDark(false);
+    }
+
+    if (heightLessThan && scrollTop >= 400) {
+      heightLessThan = false;
+      console.log('works');
+      setShouldBeDark(true);
+    }
 
     if (scrollTop > 0) {
       setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
     }
   };
 
@@ -47,13 +58,28 @@ const Navigation = () => {
     <>
       <nav
         className={`${style.navContainer} ${
-          isScrolled ? style.displayNone : ''
+          isScrolled ? style.displayFixed : ''
         }`}
         id="menu"
       >
-        <button onClick={() => scrollToElement('services')}>Hotel</button>
-        <button onClick={() => scrollToElement('price')}>Cennik</button>
-        <button onClick={() => scrollToElement('footer')}>Kontakt</button>
+        <button
+          onClick={() => scrollToElement('services')}
+          className={shouldBeDark ? style.blackButton : style.lightButton}
+        >
+          Hotel
+        </button>
+        <button
+          onClick={() => scrollToElement('price')}
+          className={shouldBeDark ? style.blackButton : style.lightButton}
+        >
+          Cennik
+        </button>
+        <button
+          onClick={() => scrollToElement('footer')}
+          className={shouldBeDark ? style.blackButton : style.lightButton}
+        >
+          Kontakt
+        </button>
       </nav>
       <FontAwesomeIcon
         icon={faArrowUp}
