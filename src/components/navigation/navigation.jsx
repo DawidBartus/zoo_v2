@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [shouldBeDark, setShouldBeDark] = useState(false);
+  const [isOnTop, setIsOnTop] = useState(true);
 
   const scrollToElement = id => {
     const element = document.getElementById(id);
@@ -31,6 +32,11 @@ const Navigation = () => {
 
     if (scrollTop > 0) {
       setIsScrolled(true);
+    }
+    if (scrollTop === 0) {
+      setIsOnTop(false);
+    } else {
+      setIsOnTop(true);
     }
   };
 
@@ -81,11 +87,15 @@ const Navigation = () => {
           Kontakt
         </button>
       </nav>
-      <FontAwesomeIcon
-        icon={faArrowUp}
-        className={style.arrowUp}
-        onClick={() => scrollToElement('root')}
-      />
+      {isOnTop ? (
+        <FontAwesomeIcon
+          icon={faArrowUp}
+          className={style.arrowUp}
+          onClick={() => scrollToElement('root')}
+        />
+      ) : (
+        ''
+      )}
     </>
   );
 };

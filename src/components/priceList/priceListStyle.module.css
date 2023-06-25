@@ -7,7 +7,7 @@
   font-size: 30px;
   background-color: #45454523;
 }
-.priceListHolder p {
+.priceListHolder {
   font-size: 36px;
   font-weight: 500;
 }
@@ -23,8 +23,14 @@
   -moz-box-shadow: 4px 4px 12px 0px rgba(66, 68, 90, 1);
   box-shadow: 4px 4px 12px 0px rgba(66, 68, 90, 1);
 }
-.priceListIteam p {
+
+.priceListPrice {
+  font-size: 22px;
+  margin: 15px 0px 10px;
+}
+.proceListParagraph {
   margin: 10px;
+  font-size: 20px;
 }
 
 .priceList {
@@ -34,5 +40,45 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 8px;
+  margin: 10px;
+}
+.priceListCalcOn {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.totalSumFixed {
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.629);
+  border-radius: 8px;
+  padding: 12px 8px;
+}
+.calcBttnOnOff {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+.calcBttn {
+  height: 22px;
+  width: 22px;
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0;
+}
+.calcBttn:hover {
+  -webkit-box-shadow: 2px 2px 12px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 2px 2px 12px 0px rgba(66, 68, 90, 1);
+  box-shadow: 2px 2px 12px 0px rgba(66, 68, 90, 1);
+}
+.calcBttnOnOff:hover {
+  -webkit-box-shadow: 2px 2px 12px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 2px 2px 12px 0px rgba(66, 68, 90, 1);
+  box-shadow: 2px 2px 12px 0px rgba(66, 68, 90, 1);
 }
