@@ -10,14 +10,10 @@ const CalcComponent = ({ price, onTotalPriceChange }) => {
     <div className={style.priceListCalcOn}>
       <button
         className={style.calcBttn}
-        onClick={async () => {
-          console.log('0', calc);
-          await setCalc(prevState => prevState + 1);
-          console.log('1', calc);
-          await setTotalPrice(prevTotalPrice => (calc + 1) * price);
-          console.log('2', calc);
-          await onTotalPriceChange((calc + 1) * price);
-          console.log('3', calc);
+        onClick={() => {
+          setCalc(prevState => prevState + 1);
+          setTotalPrice(prevTotalPrice => (calc + 1) * price);
+          onTotalPriceChange((calc + 1) * price);
         }}
       >
         +
@@ -25,14 +21,10 @@ const CalcComponent = ({ price, onTotalPriceChange }) => {
       {calc > 0 ? (
         <button
           className={style.calcBttn}
-          onClick={async () => {
-            console.log('0', calc);
-            await setCalc(prevState => prevState - 1);
-            console.log('1', calc);
-            await setTotalPrice(prevTotalPrice => (calc - 1) * price);
-            console.log('2', calc);
-            await onTotalPriceChange((calc - 1) * price);
-            console.log('3', calc);
+          onClick={() => {
+            setCalc(prevState => prevState - 1);
+            setTotalPrice(prevTotalPrice => (calc - 1) * price);
+            onTotalPriceChange((calc - 1) * price);
           }}
         >
           -
@@ -58,8 +50,10 @@ const PriceList = () => {
     });
   };
 
-  const priceListGenerator = array => {
+  const priceListGenerator = (array, startAt) => {
     return array.map(({ id, price, service }, index) => {
+      let newIndex = index + startAt;
+      console.log(newIndex);
       return (
         <li key={id} className={style.priceListIteam}>
           <p className={style.priceListPrice}>
@@ -69,7 +63,7 @@ const PriceList = () => {
             <CalcComponent
               price={price}
               onTotalPriceChange={totalPrice =>
-                handleTotalPriceChange(index, totalPrice)
+                handleTotalPriceChange(newIndex, totalPrice)
               }
             />
           ) : (
@@ -101,11 +95,11 @@ const PriceList = () => {
       >
         Kalkulator pobytu
       </button>
-      <ul className={style.priceList}>{priceListGenerator(normalPrice)}</ul>
+      <ul className={style.priceList}>{priceListGenerator(normalPrice, 0)}</ul>
       <p>holiday</p>
-      <ul className={style.priceList}>{priceListGenerator(holidayPrice)}</ul>
+      <ul className={style.priceList}>{priceListGenerator(holidayPrice, 3)}</ul>
       <p>Extras</p>
-      <ul className={style.priceList}>{priceListGenerator(extras)}</ul>
+      <ul className={style.priceList}>{priceListGenerator(extras, 6)}</ul>
       {isCalcOn ? (
         <p className={style.totalSumFixed}>
           Total Sum: {calculateTotalPriceSum()}
