@@ -10,10 +10,14 @@ const CalcComponent = ({ price, onTotalPriceChange }) => {
     <div className={style.priceListCalcOn}>
       <button
         className={style.calcBttn}
-        onClick={() => {
-          setCalc(prevState => prevState + 1);
-          setTotalPrice(prevTotalPrice => (calc + 1) * price);
-          onTotalPriceChange((calc + 1) * price);
+        onClick={async () => {
+          console.log('0', calc);
+          await setCalc(prevState => prevState + 1);
+          console.log('1', calc);
+          await setTotalPrice(prevTotalPrice => (calc + 1) * price);
+          console.log('2', calc);
+          await onTotalPriceChange((calc + 1) * price);
+          console.log('3', calc);
         }}
       >
         +
@@ -21,10 +25,14 @@ const CalcComponent = ({ price, onTotalPriceChange }) => {
       {calc > 0 ? (
         <button
           className={style.calcBttn}
-          onClick={() => {
-            setCalc(prevState => prevState - 1);
-            setTotalPrice(prevTotalPrice => (calc - 1) * price);
-            onTotalPriceChange((calc - 1) * price);
+          onClick={async () => {
+            console.log('0', calc);
+            await setCalc(prevState => prevState - 1);
+            console.log('1', calc);
+            await setTotalPrice(prevTotalPrice => (calc - 1) * price);
+            console.log('2', calc);
+            await onTotalPriceChange((calc - 1) * price);
+            console.log('3', calc);
           }}
         >
           -
@@ -32,8 +40,8 @@ const CalcComponent = ({ price, onTotalPriceChange }) => {
       ) : (
         ''
       )}
-      <p className={style.proceListParagraph}>Ilość: {calc}</p>
-      <p className={style.proceListParagraph}>Koszt: {totalPrice}</p>
+      <p className={style.priceListParagraph}>Ilość: {calc}</p>
+      <p className={style.priceListParagraph}>Koszt: {totalPrice}</p>
     </div>
   );
 };
@@ -67,7 +75,7 @@ const PriceList = () => {
           ) : (
             ''
           )}
-          <p className={style.proceListParagraph}>{service}</p>
+          <p className={style.priceListParagraph}>{service}</p>
         </li>
       );
     });

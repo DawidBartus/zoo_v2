@@ -5,7 +5,8 @@
   display: flex;
   align-items: center;
   font-size: 30px;
-  background-color: #45454523;
+  background-color: #ff620023;
+  /* background-color: #45454523; */
 }
 .priceListHolder {
   font-size: 36px;
@@ -14,7 +15,6 @@
 
 .priceListIteam {
   background: linear-gradient(-45deg, #9f9f9f 0%, #ffffff 100%);
-  width: 100%;
   min-width: 150px;
   max-width: 250px;
   text-align: center;
@@ -22,13 +22,14 @@
   -webkit-box-shadow: 4px 4px 12px 0px rgba(66, 68, 90, 1);
   -moz-box-shadow: 4px 4px 12px 0px rgba(66, 68, 90, 1);
   box-shadow: 4px 4px 12px 0px rgba(66, 68, 90, 1);
+  transition: 300ms;
 }
 
 .priceListPrice {
   font-size: 22px;
   margin: 15px 0px 10px;
 }
-.proceListParagraph {
+.priceListParagraph {
   margin: 10px;
   font-size: 20px;
 }
